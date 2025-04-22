@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>موقعي الشخصي</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      transition: background-color 0.5s ease;
+    }
+
+    header {
+      background: url(https://i.imgur.com/phRBMd0.jpeg) center/cover no-repeat;
+      color: white;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      background-color: rgba(0, 0, 0, 0.5);
+      display: inline-block;
+      padding: 15px 30px;
+      border-radius: 10px;
+    }
+
+    nav {
+      background-color: #444;
+      padding: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #ff6347;
+    }
+
+    section {
+      padding: 40px 20px;
+      margin: 20px auto;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    section h2 {
+      color: #333;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      color: #ff6347;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    .project-image {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 8px;
+      margin: 10px;
+    }
+
+    .project-image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    iframe {
+      border: 0;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 600px;
+      height: 450px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .download-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #2575fc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-top: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background-color: #6a11cb;
+    }
+
+    /* تنسيق زر واتساب */
+    .whatsapp-btn {
+      background-color: #25D366; /* لون أخضر مشابه لواتساب */
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 15px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #128C7E;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>مرحباً بكم في موقعي الشخصي</h1>
+  </header>
+
+  <nav>
+    <a href="#about-me">من أنا</a>
+    <a href="#projects">أعمالي</a>
+    <a href="#contact">تواصل معي</a>
+    <a href="#location">موقعي</a>
+  </nav>
+
+  <section id="about-me">
+    <h2>من أنا</h2>
+    <p>أنا كهربائي منزلي حاصل على شهادة تدريب مهني في مجال الكهرباء العامة. أتمتع بخبرة واسعة في الصيانة والتركيبات الكهربائية للمنازل.</p>
+    <a href="cv.pdf" class="download-btn" download>تحميل السيرة الذاتية</a>
+  </section>
+
+  <section id="projects">
+    <h2>أعمالي</h2>
+    <p>هذه بعض المشاريع التي قمت بتنفيذها:</p>
+    <div>
+      <img src="https://i.imgur.com/jTf9JUA.jpg" alt="مشروعي الأول" class="project-image" width="300">
+      <img src="https://i.imgur.com/8CO99JL.jpg" alt="مشروعي الثاني" class="project-image" width="300">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>تواصل معي</h2>
+    <p>تابعني على وسائل التواصل:</p>
+    <p>
+      <a href="https://www.instagram.com/anas_foo/">إنستغرام</a> |
+      <a href="https://www.facebook.com/share/1FgdfSBYoP/">فيسبوك</a>
+    </p>
+
+    <!-- زر واتساب -->
+  </section>
+
+  <section id="location">
+    <h2>موقعي</h2>
+    <p>Adolf-reichwein 77, 28329 Bremen</p>
+    <iframe src="https://maps.google.com/maps?q=Adolf-reichwein%2077%2028329%20Bremen&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 جميع الحقوق محفوظة.</p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      document.querySelectorAll('section').forEach(function (section) {
+        if (section.getBoundingClientRect().top < window.innerHeight - 50) {
+          section.classList.add('visible');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
