@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://elektrikeraf.github.io/Webseite/sitemap.xml
